@@ -9,31 +9,7 @@
     "routes": [
         {
             "src": "/(.*)",
-            "dest": "/"
-        },
-        {
-            "src": "/",
-            "dest": "/index.js",
-            "methods": [
-                "GET",
-                "POST"
-            ]
-        },
-        {
-            "src": "/login",
-            "dest": "/index.js",
-            "methods": [
-                "GET",
-                "POST"
-            ]
-        },
-        {
-            "src": "/produtos",
-            "dest": "/index.js",
-            "methods": [
-                "GET",
-                "POST"
-            ]
+            "dest": "/index.js"
         }
     ]
 }
