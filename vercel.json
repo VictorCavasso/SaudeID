@@ -15,14 +15,24 @@
             "src": "/",
             "dest": "/index.js",
             "methods": [
-                "GET"
+                "GET",
+                "POST"
             ]
         },
         {
-            "src": "/cotacao",
+            "src": "/login",
             "dest": "/index.js",
             "methods": [
-                "GET"
+                "GET",
+                "POST"
+            ]
+        },
+        {
+            "src": "/produtos",
+            "dest": "/index.js",
+            "methods": [
+                "GET",
+                "POST"
             ]
         }
     ]
