@@ -1,0 +1,42 @@
+<%- include('../partials/header') %>
+
+  <section id="about">
+    <div class="starter-template">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>Produtos</h2>
+          <p class="lead">Todos os Produtos Cadastrados: <a href="/produtos/novo" class='btn btn-info'>Novo Produto</a>
+          </p>
+          <table class='table table-hover'>
+            <% produtos.forEach(produto=> { %>
+              <tr>
+                <td>
+                  <a href='/produtos/info/<%= produto.id %>'>
+                    <%= produto.description %>
+                  </a>
+                </td>
+                <td>
+                  <span class='badge badge-secondary'>
+                    <% if(produto.items> 0){ %>
+                      disponivel
+                      <% } else{ %>
+                        indisponivel
+                        <% } %>
+                  </span>
+                </td>
+                <td>
+                  <a href="/produtos/editar/<%= produto.id %>">Editar</a> |
+                  <a href="/produtos/excluir/<%= produto.id %>">Excluir</a>
+                </td>
+              </tr>
+              <% }) %>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <%- include('../partials/footer') %>

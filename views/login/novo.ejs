@@ -1,0 +1,38 @@
+<%- include('../partials/header.ejs') %>
+
+    <section id="about">
+        <div class="starter-template">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <form method='post'>
+                        <h2>Novo Usuário</h2>
+                        <div class="form-group">
+                            <label for="username">Usuário:</label>
+                            <input name="username" type="text" class="form-control" id="username"
+                                aria-describedby="nameHelp" placeholder="Informe o usuário">
+                            <small id="nameHelp" class="form-text text-muted">Usuário a ser salvo.</small>
+                            <% if(errors && errors.indexOf('username')>= 0) { %>
+                                <small id="nameHelp" class="form-text text-muted">
+                                    Por favor, informe o usuário
+                                </small>
+                                <% } %>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Senha:</label>
+                            <input name="password" type="password" class="form-control" id="password"
+                                aria-describedby="nameHelp" placeholder="Informe a senha">
+                            <small id="nameHelp" class="form-text text-muted">Senha a ser salva.</small>
+                            <% if(errors && errors.indexOf('password')>= 0) { %>
+                                <small id="nameHelp" class="form-text text-muted">
+                                    Por favor, informe a senha
+                                </small>
+                                <% } %>
+                        </div>
+                        <button class='btn btn-primary'>Salvar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <%- include('../partials/footer') %>
