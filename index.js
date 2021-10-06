@@ -15,7 +15,7 @@ const pages = require('./routes/pages')
 const session = require('express-session')
 const bodyParser = require('body-parser')
 
-const mongo = process.env.MONGODB || 'mongodb+srv://DBA:VC7A6.WJxKr4eb%25@cluster0.zyauy.mongodb.net/TesteSaudeId?retryWrites=true&w=majority'
+const mongo = process.env.MONGODB
 
 app.set('views', path.join(__dirname, 'views'))
 app.use(express.static(path.join(__dirname, 'public')))
