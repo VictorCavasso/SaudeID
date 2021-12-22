@@ -21,7 +21,6 @@ router.get('/logout', (req, res) => {
   req.session.destroy(() => {
     res.redirect('/')
   })
-  console.log('req.session.user: ', req.session.user)
 })
 
 router.post('/login', usersController.login.bind(null, { User }))
