@@ -21,7 +21,7 @@ app.set('views', path.join(__dirname, 'views'))
 app.use(express.static(path.join(__dirname, 'public')))
 app.set('view engine', 'ejs')
 
-app.use(session({ secret: 'saude-id-produtos', resave: true, saveUninitialized: true }))
+app.use(session({ secret: '2C44-4D44-WppQ38S', resave: true, saveUninitialized: true }))
 app.use(bodyParser.urlencoded({ extended: true }))
 
 app.use('/', auth)
